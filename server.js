@@ -5,7 +5,7 @@ const app = express();
 const PORT = 8080;
 
 var corsOptions = {
-    origin: 'https://localhost:8081'
+    origin: ['https://localhost:8081','http://localhost:4200']
 };
 
 //middlewares
