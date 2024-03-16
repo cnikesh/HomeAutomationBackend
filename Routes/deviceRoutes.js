@@ -7,6 +7,8 @@ router.post('/addDevice', deviceController.addDevice)
 
 router.get('/allDevices', deviceController.getAllDevices)
 
+router.get('/getDevicesByGroup/:id', deviceController.getDevicesByGroup)
+
 
 // Products router
 router.get('/:id', deviceController.getOneDevice)

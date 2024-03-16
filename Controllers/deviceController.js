@@ -66,10 +66,21 @@ const deleteDevice = async (req, res) => {
 
 }
 
+const getDevicesByGroup = async (req, res) => {
+
+    let id = req.params.id
+    let devices = await Device.findAll({
+        where:{group:id}
+    })
+    res.status(200).send(devices)
+
+}
+
 module.exports = {
     addDevice,
     getAllDevices,
     getOneDevice,
     updateDevice,
-    deleteDevice
+    deleteDevice,
+    getDevicesByGroup
 }
